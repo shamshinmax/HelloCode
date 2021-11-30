@@ -8,4 +8,4 @@ int temp = A;
 for (int i = 1; i < step; i++){
     A = A * temp;
 }
-Console.WriteLine($"Число {temp} в степени {B} = {A}");
+Console.WriteLine($"Число {temp} в степени {step} = {A}");
