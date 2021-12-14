@@ -28,8 +28,7 @@ void IftoReturn(int number, int[,] array){
             if(array[i,j]==number){
                 Console.WriteLine($"Позиция числа {number}: ({i};{j})");
                 flag = true;
-            }
-        
+            }    
     }
     }
     if (flag == false){

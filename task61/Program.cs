@@ -34,21 +34,24 @@ array2[0,1] = 9;
 array2[1,0] = 13;
 array2[1,1] = 7;
 PrintArray(array1);
+Console.WriteLine();
 PrintArray(array2);
-void multiplication(int[,] array1, int[,] array2, int[,] finalArray){
-    for (int i = 0; i < m; i++){
+Console.WriteLine();
+void multiplication(int[,] array1, int[,] array2, int[,] finalArray){//                      44 24         45 9     |44*45+24*13|  |24*13 + 16 * 7|
+    for (int i = 0; i < m; i++){                                     //                      16 16         13 7     |16*45+16*13|
         for (int j = 0; j < m; j++){
-            if(i == 0 && j == 0){
-                Console.WriteLine($"{i}, {j}");
-                finalArray[i,j] = (array1[i, j] * array2[i,j]) + (array1[i+1, i] * array2[i,i+1]); 
+            for (int k = 0; k < m; k++){
+                finalArray[i,j] = finalArray[i,j] + (array1[i, k] * array2[k, j]);
+                Console.WriteLine($"{i} {j}");
+
             }
-            else{
-                Console.WriteLine($"{i}, {j}");
-                finalArray[i,j] = (array1[i, i] * array2[i,j]) + (array1[i, j] * array2[j,j]);
-            }
+            //[0, 0]0 0 * 0 0 + 0 1 * 1 0 
+            //[0, 1]0 1 * 1 0 + 1 1 * 1 0 
+            //[1, 0]1 0 * 0 0 + 1 1 * 0 1
+            //[1, 1]1 0 * 0 1 + 1 1 * 1 1
+                }
 
         }
     }
-}
 multiplication(array1, array2, finalArray);
 PrintArray(finalArray);
