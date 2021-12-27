@@ -8,6 +8,7 @@
 Console.WriteLine("Введите значения вершнин фигуры");
 string text = Console.ReadLine();
 int[] array = new int[8];
+int k = int.Parse(Console.ReadLine());
 int count = 0;
 for (int i = 0; i < text.Length; i++){
     char b = text[i];
