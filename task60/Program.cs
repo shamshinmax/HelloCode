@@ -1,7 +1,8 @@
 ﻿//Частотный анализ
 Console.WriteLine("");
 string readText = File.ReadAllText("text.txt");
-string text = Console.ReadLine();
+string text = readText
+
 string[] arr = new string[text.Length];
 string[] arr2 = new string[text.Length];
 void ConvertTxtToMass(string txt, string[] array){
