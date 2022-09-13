@@ -1,5 +1,6 @@
 ﻿//Частотный анализ
-Console.WriteLine("Напишите текст:");
+Console.WriteLine("");
+string readText = File.ReadAllText("text.txt");
 string text = Console.ReadLine();
 string[] arr = new string[text.Length];
 string[] arr2 = new string[text.Length];
